@@ -4,8 +4,8 @@
   "description": "",
   "main": "App.js",
   "scripts": {
-    "start": "node src/App.js",
-    "server": "nodemon src/App.js",
+    "start": "node src/Server.js",
+    "server": "nodemon src/Server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.12.12"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
     "nodemon": "^2.0.7"
   }
 }
