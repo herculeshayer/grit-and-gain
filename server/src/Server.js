@@ -14,8 +14,8 @@ db.once('open', ()=>console.log('Successful Connection'));
 
 app.use(express.json());
 
-const articleRoutes = require('./routes/Articles');
-app.use('/Articles', articleRoutes);
+// const articleRoutes = require('./routes/Articles');
+app.use('/Articles', require('./routes/Articles'));
 
 
 
