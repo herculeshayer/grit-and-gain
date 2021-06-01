@@ -1,4 +1,5 @@
 const express = require('express');
+const { find, findByIdAndUpdate } = require('../model/Article');
 const router = express.Router();
 
 const Article = require('../model/Article');
@@ -47,6 +48,18 @@ router.post('/', ( req , res) => {
 })
 
 //Update One
+router.patch('/:id', async ( req , res ) => {
+    try {
+        let article = await Article.findById(req.params.id);
+        if(req.params.id == null) {
+            return res.status(204).json({message: "not found"});
+        }
+        article.save();
+        // res.status(200).json(article);
+    } catch (error) {
+        res.status(204).json({message: error.message});
+    }
+})
 
 //Delete One
 router.delete('/:id', async ( req , res ) => {
