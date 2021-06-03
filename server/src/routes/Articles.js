@@ -32,13 +32,18 @@ router.get('/', async ( req , res ) => {
 
 //Create One
 router.post('/', ( req , res) => {
+    
+    // if(req.body && req.body.location) {
+        
+    // }
     const article = new Article({
         title: req.body.title,
         author: req.body.author,
         upvotes: req.body.upvotes,
-        // comments: req.body.comments,
+        comments: req.body.comments,
         data: req.body.data
     })
+    
     try {
         const newArticle = article.save();
         res.status(201).json(newArticle);
@@ -49,13 +54,22 @@ router.post('/', ( req , res) => {
 
 //Update One
 router.patch('/:id', async ( req , res ) => {
+
+    // if(req.body.title != null) {
+    //     res.body.title = req.body.title;
+    // }
+
     try {
-        let article = await Article.findById(req.params.id);
         if(req.params.id == null) {
             return res.status(204).json({message: "not found"});
         }
-        article.save();
-        // res.status(200).json(article);
+        let article = await Article.findByIdAndUpdate({
+            _id: req.params.id
+        }, {
+            $set: req.body
+        });
+        // article.save();
+        res.status(200).json(article);
     } catch (error) {
         res.status(204).json({message: error.message});
     }
@@ -63,7 +77,6 @@ router.patch('/:id', async ( req , res ) => {
 
 //Delete One
 router.delete('/:id', async ( req , res ) => {
-
     try {
         let article = await Article.findByIdAndDelete(req.params.id);
         if( req.params.id == null ) {
@@ -75,6 +88,9 @@ router.delete('/:id', async ( req , res ) => {
     }
 
 })
+
+//middleware
+
 
 module.exports = router;
 
