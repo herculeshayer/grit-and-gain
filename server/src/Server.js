@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser : true, useUnifiedTopology : true });
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser : true, useUnifiedTopology : true, useFindAndModify : false });
 const db = mongoose.connection;
 db.on('error', err=>console.log(err));
 db.once('open', ()=>console.log('Successful Connection'));
