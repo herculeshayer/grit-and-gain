@@ -30,12 +30,8 @@ router.get('/', async ( req , res ) => {
     }
 })
 
-//Create One
-router.post('/', ( req , res) => {
-    
-    // if(req.body && req.body.location) {
-        
-    // }
+//Create Article
+router.post('/', ( req , res ) => {
     const article = new Article({
         title: req.body.title,
         author: req.body.author,
@@ -43,13 +39,24 @@ router.post('/', ( req , res) => {
         comments: req.body.comments,
         data: req.body.data
     })
-    
     try {
         const newArticle = article.save();
         res.status(201).json(newArticle);
     } catch (error) {
         res.status(400).json({ message: 'there was an error', error })
     }
+})
+//Get Comment
+router.get('/:id/comment', ( req , res ) => {
+    
+})
+//Create Comment
+router.post('/:id/comment', ( req , res ) => {
+
+})
+//Create Upvote
+router.post('/:id/upvote', ( req , res ) => {
+    
 })
 
 //Update One

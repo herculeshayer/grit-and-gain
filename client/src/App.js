@@ -1,11 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
+import Articles from './pages/Articles';
 
+import NavBar from './NavBar';
+
+const mainOverlay = {
+  marginTop: "30px"
+}
 
 function App() {
   return (
-    <Home />
+    <Router>
+      <div style={mainOverlay}>
+        <NavBar />
+        <Route path="/" component={HomePage} exact />
+        <Route path="/Articles" component={Articles} />
+      </div>
+    </Router>
   );
 }
 
