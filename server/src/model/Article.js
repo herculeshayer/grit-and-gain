@@ -13,18 +13,18 @@ const articleSchema = new mongoose.Schema({
         type: Number,
         required: false
     },
-    // comments: [
-    //     {
-    //         username:{
-    //             type: String,
-    //             required: false
-    //         },
-    //         text: {
-    //             type: String,
-    //             required: false
-    //         }
-    //     },
-    // ],
+    comments: [
+        {
+            username:{
+                type: String,
+                required: false
+            },
+            text: {
+                type: String,
+                required: false
+            }
+        },
+    ],
     data: {
         type: String,
         required: true

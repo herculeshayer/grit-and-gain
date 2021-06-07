@@ -54,6 +54,10 @@ router.get('/:id/comment', ( req , res ) => {
 router.post('/:id/comment', ( req , res ) => {
 
 })
+//Get Upvote
+router.get('/:id/upvote', ( req , res ) => {
+    
+})
 //Create Upvote
 router.post('/:id/upvote', ( req , res ) => {
     
