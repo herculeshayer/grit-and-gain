@@ -3,10 +3,12 @@ require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+app.use(cors({credentials: true, origin: true}));
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser : true, useUnifiedTopology : true, useFindAndModify : false });
 const db = mongoose.connection;
