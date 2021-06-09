@@ -7,3 +7,21 @@ html,
 body {
     background-color: #F9F5E3;
 }
+
+li {
+    display: inline-block;
+    padding: 12px;
+}
+
+li a {
+    padding: 12px;
+}
+
+nav a {
+    color:#C2FFE3;
+    text-decoration: none;
+}
+nav a:hover {
+    background: black;
+    color:bisque;
+}
