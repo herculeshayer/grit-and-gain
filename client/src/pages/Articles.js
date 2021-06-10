@@ -5,7 +5,6 @@ import ArticleFetch from '../components/ArticleFetch';
 const Articles = () => {
     return (
         <section>
-            
             <ArticleFetch />
         </section>
     );

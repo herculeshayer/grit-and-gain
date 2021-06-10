@@ -1,38 +1,31 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import GetOneArticle from './GetOneArticle';
 
 const StyleArticle = {
     textAlign: "center",
 }
-const PaddingH1 = {
-    paddingBottom: "50px",
-}
 
 
-const ArticleFetch = () => {
+const ArticleFetch = ({name}) => {
     const [ articleData, setArticleData ] = useState([]);
-
+    console.log(name);
     useEffect(()=> {
         fetch('/articles')
             .then((res) => res.json())
             .then((data)=> setArticleData(data))
             .catch(error=>console.log(error))
-        console.log(articleData);
     },[])
     const mapArticles = articleData.map((article, key)=> {
-        const { title, author, data } = article;
-        return(
-            <article key={key}>
-                <h1>{title}</h1>
-                
-                <br />
-            </article>
-        );
-    }) 
-    return(
-        <div style={StyleArticle}>
-            <h1 style={PaddingH1}>Articles Page</h1>
+        return <GetOneArticle key={key} article={article}/>
+    })
+    
+    return (
+        <>
             {mapArticles}
-        </div>
+        </>
     );
+
 }
 export default ArticleFetch;
