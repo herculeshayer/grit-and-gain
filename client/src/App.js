@@ -21,8 +21,8 @@ function App() {
       <div style={mainOverlay}>
         <NavBar />
         <Route path="/" component={HomePage} exact />
-        <Route path="/Articles" component={Articles} />
-        <Route path="/Articles/:id" component={DisplayArticle} />
+        <Route path="/Articles-List" component={Articles} />
+        <Route path="/Article/:id" component={DisplayArticle} />
         <Route path="/About-Us" component={AboutUs} />
         <Route path="/Contact" component={Contact} />
       </div>
