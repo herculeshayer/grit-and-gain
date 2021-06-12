@@ -38,6 +38,7 @@ const ArticleGetAll = () => {
             {mapData}
         </div>
     );
+
 }
 const ArticleGetOne = ({name}) => {
     const [ articleData, setArticleData ] = useState([]);
