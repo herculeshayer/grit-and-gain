@@ -23,7 +23,7 @@ const NavBar = () => {
                         <Link to="/"><HiOutlineHome /> Home</Link>
                     </li>
                     <li>
-                        <Link to="/Articles"><RiArticleLine /> Articles</Link>
+                        <Link to="/Articles-List"><RiArticleLine /> Articles</Link>
                     </li>
                     <li>
                         <Link to="/About-Us"><AiOutlineQuestionCircle /> About Us</Link>
