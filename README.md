@@ -1,4 +1,4 @@
-#Workout Blog
+# Workout Blog
 
 
 A CRUD workout blog created using 
@@ -11,7 +11,7 @@ The application is hosted on AWS Amplify using CI/CD workflows
 **Users can create articles, edit them, and delete them.**
 
 
-####Installation
+#### Installation
 `git clone repo`
 cd into client and
 `npm install`
