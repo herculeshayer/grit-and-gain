@@ -11,7 +11,8 @@ const articleSchema = new mongoose.Schema({
     },
     upvotes: {
         type: Number,
-        required: false
+        required: false,
+        default: "1"
     },
     comments: [
         {
