@@ -25,3 +25,16 @@ nav a:hover {
     background: black;
     color:bisque;
 }
+
+button {
+    width: 8rem;
+    height: 4rem;
+    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.548);
+}
+button:focus {
+    background-color: powderblue;
+    color:rgb(34, 33, 41)
+}
+button:hover {
+    background-color: white;
+}
