@@ -13,7 +13,7 @@ import DisplaySingleArticle from './pages/DisplaySingleArticle';
 import NavBar from './NavBar';
 
 const mainOverlay = {
-  marginTop: "50px"
+  marginTop: "100px"
 }
 
 function App() {
