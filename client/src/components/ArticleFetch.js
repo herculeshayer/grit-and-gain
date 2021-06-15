@@ -26,7 +26,7 @@ const ArticleGetAll = () => {
         const {_id, title} = article;
         return (
             <div key={key}>
-                <Link style={{display: "inline-block"}} to={`/article/${_id}`}><h2>{title}</h2></Link>
+                <Link style={{display: "inline-block", padding:"5px"}} to={`/article/${_id}`}><h2>{title}</h2></Link>
                 <br />
             </div>
         );
@@ -40,6 +40,9 @@ const ArticleGetAll = () => {
     );
 
 }
+
+
+
 const ArticleGetOne = ({name}) => {
     const [ articleData, setArticleData ] = useState([]);
     
@@ -59,7 +62,8 @@ const ArticleGetOne = ({name}) => {
         return(
             <div key={key} style={{StyleArticle}}>
                 <h1>Article: {title}</h1>
-                <h4>Created By: {author}</h4>
+                <h3>Created By: {author}</h3>
+                <p style={{paddingBottom: "50px"}}><h5>Article Information: </h5>{data}</p>
                 <h6>Upvotes: {upvotes}</h6>
                 <p>Comments: {comments.map((comment, key) => {
                     const { username, text } = comment;
@@ -70,7 +74,7 @@ const ArticleGetOne = ({name}) => {
                         </div>
                     );
                 })}</p>
-                <p>{data}</p>
+                
 
 
             </div>
