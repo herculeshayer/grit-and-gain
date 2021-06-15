@@ -24,6 +24,7 @@ function App() {
         <Route path="/" component={HomePage} exact />
         <Route path="/Articles-List" component={ArticlesList} />
         <Route path="/Article/:id" component={DisplaySingleArticle} />
+        
         <Route path="/About-Us" component={AboutUs} />
         <Route path="/Contact" component={Contact} />
       </div>
