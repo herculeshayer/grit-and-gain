@@ -84,8 +84,6 @@ const ArticleGetOne = ({name}) => {
     )
 }
 
-
-
 export {
     ArticleGetAll,
     ArticleGetOne
