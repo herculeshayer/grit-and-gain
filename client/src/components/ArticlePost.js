@@ -66,7 +66,7 @@ const ArticlePost = ({closeModal}) => {
                     <label>Author: </label>
                     <input type="name" value={author} placeholder="John Doe" onChange={(e)=>setAuthor(e.target.value)} required/>
                     <label>Data: </label>
-                    <textarea rows="5" cols="80" value={data} placeholder="Keep correct form" onChange={(e)=>setData(e.target.value)} required/>
+                    <textarea rows="5" cols="50" value={data} placeholder="Keep correct form" onChange={(e)=>setData(e.target.value)} required/>
                 </div>
                 <div style={footer}>
                     <button type="submit" >Submit</button>
