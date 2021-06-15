@@ -7,7 +7,7 @@ import ArticlesList from './pages/ArticlesList';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import DisplaySingleArticle from './pages/DisplaySingleArticle';
-import CreateArticle from './pages'
+
 
 //Navigation Bar
 import NavBar from './NavBar';
@@ -24,7 +24,7 @@ function App() {
         <Route path="/" component={HomePage} exact />
         <Route path="/Articles-List" component={ArticlesList} />
         <Route path="/Article/:id" component={DisplaySingleArticle} />
-        <Route path="/Create-Article" component={CreateArticle} />
+        
         <Route path="/About-Us" component={AboutUs} />
         <Route path="/Contact" component={Contact} />
       </div>
