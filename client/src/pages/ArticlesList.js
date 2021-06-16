@@ -10,9 +10,9 @@ const ArticlesList = () => {
     return (
         <>
             <h3>This is the articles page</h3>
-            <p style={{marginBottom: "100px"}}>Below are a few articles which you can view</p>
+            <p>Below are a few articles which you can view</p>
             <div>
-                <button onClick={()=> setShowModal(true)}>Create Article</button>
+                <button style={{marginBottom: "18vh"}} onClick={()=> setShowModal(true)}>Create Article</button>
                 {showModal && <ArticlePost closeModal={()=>setShowModal(false)}/>}
             </div>
             <ArticleGetAll />

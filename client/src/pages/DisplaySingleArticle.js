@@ -9,10 +9,7 @@ const DisplaySingleArticle = ({match}) => {
    
     return (
         <article>
-            
-            <h1>Article {name}</h1>
             <ArticleGetOne name={name}/>
-            
         </article>
     );
 }
