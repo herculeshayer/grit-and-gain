@@ -64,7 +64,8 @@ const ArticlePost = ({closeModal}) => {
                 <h1 style={{paddingBottom: "20px", textAlign: "center"}}>Create Article</h1>
                 <div style={body}>
                     <label>Title: </label>
-                    <input 
+                    <input
+                        style={{width: "60%", maxWidth: "100%"}} 
                         type="text" 
                         value={title} 
                         placeholder="How to Squat with Correct Form" 
@@ -74,6 +75,7 @@ const ArticlePost = ({closeModal}) => {
                     <br/>
                     <label>Author: </label>
                     <input 
+                        style={{width: "60%", maxWidth: "100%"}} 
                         type="name" 
                         value={author} 
                         placeholder="John Doe" 
@@ -82,6 +84,7 @@ const ArticlePost = ({closeModal}) => {
                     />
                     <br />
                     <label>Data: </label>
+                    <br />
                     <textarea 
                         style={{resize: "none", maxWidth: "100%"}} 
                         rows="20" 
