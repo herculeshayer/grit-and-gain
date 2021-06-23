@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gritandgain-dev-121949-authRole",
+      "UnauthRoleArn": "arn:aws:iam::818779951697:role/amplify-gritandgain-dev-121949-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::818779951697:role/amplify-gritandgain-dev-121949-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-gritandgain-dev-121949-deployment",
+      "UnauthRoleName": "amplify-gritandgain-dev-121949-unauthRole",
+      "StackName": "amplify-gritandgain-dev-121949",
+      "StackId": "arn:aws:cloudformation:us-west-2:818779951697:stack/amplify-gritandgain-dev-121949/fdeb8600-cfa0-11eb-aba1-0a5e1eae02b3",
+      "AmplifyAppId": "d3tkshjglpqi9g"
+    },
+    "categories": {
+      "function": {
+        "gritandgain5eb16f84": {
+          "deploymentBucketName": "amplify-gritandgain-dev-121949-deployment",
+          "s3Key": "amplify-builds/gritandgain5eb16f84-70494272577646353974-build.zip"
+        }
+      }
+    }
+  }
+}
