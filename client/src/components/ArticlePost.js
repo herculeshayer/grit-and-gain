@@ -34,12 +34,12 @@ const footer = {
 const ArticlePost = ({closeModal}) => {
     const [ title, setTitle ] = useState('');
     const [ author, setAuthor ] = useState('');
-    const [ data, setData ] = useState('');
+    const [ articleInfo, setarticleInfo ] = useState('');
     
     const addArticle = async() => {
-            fetch('http://localhost:8000/articles/', {
+            fetch('https://oj4m71cxjh.execute-api.us-west-2.amazonaws.com/dev/articles', {
             method: 'POST',
-            body: JSON.stringify({title, author, data}),
+            body: JSON.stringify({title, author, articleInfo}),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -53,7 +53,7 @@ const ArticlePost = ({closeModal}) => {
 
         setTitle('');
         setAuthor('');
-        setData('');
+        setarticleInfo('');
         closeModal();
         (()=>window.location.reload())()
     }
@@ -71,6 +71,7 @@ const ArticlePost = ({closeModal}) => {
                         placeholder="How to Squat with Correct Form" 
                         onChange={(e)=>setTitle(e.target.value)} 
                         required
+                        
                     />
                     <br/>
                     <label>Author: </label>
@@ -83,15 +84,15 @@ const ArticlePost = ({closeModal}) => {
                         required
                     />
                     <br />
-                    <label>Data: </label>
+                    <label>Article Info: </label>
                     <br />
                     <textarea 
                         style={{resize: "none", maxWidth: "100%"}} 
                         rows="20" 
                         cols="50" 
-                        value={data} 
+                        value={articleInfo} 
                         placeholder="Keep correct form" 
-                        onChange={(e)=>setData(e.target.value)} 
+                        onChange={(e)=>setarticleInfo(e.target.value)} 
                         required
                     />
                 </div>
