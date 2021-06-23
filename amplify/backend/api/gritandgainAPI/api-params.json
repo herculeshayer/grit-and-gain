@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/articles",
+      "lambdaFunction": "gritandgain5eb16f84",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/articles"
+    }
+  ],
+  "resourceName": "gritandgainAPI",
+  "apiName": "gritandgainAPI",
+  "functionArns": [
+    {
+      "lambdaFunction": "gritandgain5eb16f84"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-gritandgain-dev-121949-authRole",
+    "unAuthRoleName": "amplify-gritandgain-dev-121949-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "gritandgain5eb16f84",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
