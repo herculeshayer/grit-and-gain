@@ -51,3 +51,32 @@ button:hover {
     background-color: white;
 }
 
+/*Modal CSS*/
+
+.formContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 40%;
+    background-color:white;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.bodyStyle {
+    text-align: center;
+}
+
+.footerStyle {
+    text-align: center;
+    padding: 20px;
+}
