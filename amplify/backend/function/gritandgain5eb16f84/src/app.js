@@ -12,6 +12,7 @@ See the License for the specific language governing permissions and limitations 
 var express = require('express')
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose');
+require('dotenv').config()
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 
 // declare a new express app
@@ -19,7 +20,6 @@ var app = express()
 app.use(express.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
 
-const mongoAtlasURI = 'mongodb+srv://amplifyAdministratorUser:4ImUxgHzb1VpjCTb@clusterbustermuster.wv017.mongodb.net/articles?retryWrites=true&w=majority'
 
 // Enable CORS for all methods
 app.use(function(req, res, next) {
@@ -27,12 +27,12 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "*")
   next()
 });
-mongoose.connect(mongoAtlasURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true });
+mongoose.connect(`${process.env.MONGO_ATLAS}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true });
 const db = mongoose.connection;
 db.on('error with db', (err)=>console.log(err));
 db.once('db open', ()=>console.log('successful connection'));
 
-
+console.log('mongoatlas',process.env.MONGO_ATLAS);
 app.use('/articles', require('./routes/Articles'))
 
 
