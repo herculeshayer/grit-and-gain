@@ -2,6 +2,7 @@ import React from 'react';
 import { Context } from 'react';
 
 import { ArticleGetOne, ArticleGetAll } from '../components/ArticleFetch';
+import ArticleDelete from '../components/ArticleDelete';
 
 
 const DisplaySingleArticle = ({match}) => {
@@ -10,6 +11,7 @@ const DisplaySingleArticle = ({match}) => {
     return (
         <article>
             <ArticleGetOne name={name}/>
+            <ArticleDelete name={name}/>
         </article>
     );
 }
