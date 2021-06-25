@@ -32,7 +32,7 @@ const db = mongoose.connection;
 db.on('error with db', (err)=>console.log(err));
 db.once('db open', ()=>console.log('successful connection'));
 
-console.log('mongoatlas',process.env.MONGO_ATLAS);
+
 app.use('/articles', require('./routes/Articles'))
 
 
