@@ -19,3 +19,4 @@ amplifytools.xcconfig
 .secret-*
 
 server/
+amplify/backend/function/gritandgain5eb16f84/src/.env
