@@ -52,7 +52,13 @@ router.patch('/:id', async ( req , res ) => {
         if(req.params.id == null) {
             res.status(204).json({message: "article not found"});
         }
-        const patchArticle = await Article.findByIdAndUpdate(req.params.id, res.body())
+        const patchArticle = await Article.findByIdAndUpdate(req.params.id, {
+            $set: {
+                title: req.body.title,
+                author: req.body.author,
+                articleInfo: req.body.articleInfo
+            }
+        }, { useFindAndModify : true })
         res.status(200).json(patchArticle);
     } catch (error) {
         res.status(500).json({message: error.message})
