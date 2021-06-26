@@ -28,7 +28,7 @@ const articleSchema = new mongoose.Schema({
     ],
     articleInfo: {
         type: String,
-        required: false
+        required: true
     },
     date: {
         type: Date,
