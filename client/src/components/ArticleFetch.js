@@ -47,7 +47,7 @@ const ArticleGetOne = ({name}) => {
     const [ articleData, setArticleData ] = useState([]);
     
     useEffect(()=> {
-        fetch('https://oj4m71cxjh.execute-api.us-west-2.amazonaws.com/dev/articles')
+            fetch('https://oj4m71cxjh.execute-api.us-west-2.amazonaws.com/dev/articles')
             .then((res) => res.json())
             .then((data)=> {
                 setArticleData(data.filter(article => article._id === name))
