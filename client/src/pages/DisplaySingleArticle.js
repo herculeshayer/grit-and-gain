@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Context } from 'react';
+// import { Context } from 'react';
 
-import { ArticleGetOne, ArticleGetAll } from '../components/ArticleFetch';
+import { ArticleGetOne } from '../components/ArticleGet';
 import ArticleDelete from '../components/ArticleDelete';
 import ArticlePatch from '../components/ArticlePatch';
-import CommentPost from '../components/CommentPost';
+import { CommentPost } from '../components/CommentPost';
 
 
 const DisplaySingleArticle = ({match}) => {
