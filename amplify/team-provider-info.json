@@ -15,7 +15,7 @@
       "function": {
         "gritandgain5eb16f84": {
           "deploymentBucketName": "amplify-gritandgain-dev-121949-deployment",
-          "s3Key": "amplify-builds/gritandgain5eb16f84-51423355547a6e666d4a-build.zip"
+          "s3Key": "amplify-builds/gritandgain5eb16f84-69642f44516a4a676650-build.zip"
         }
       }
     }
