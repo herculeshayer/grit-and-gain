@@ -23,6 +23,11 @@ const articleSchema = new mongoose.Schema({
             text: {
                 type: String,
                 required: false
+            },
+            upvote: {
+                type: Number,
+                requred: false,
+                default: "1"
             }
         },
     ],

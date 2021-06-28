@@ -50,6 +50,14 @@ router.post('/', (req, res) => {
 router.post('/:id/comment', async (req, res) => {
     // const { username, text } = req.body;
     try {
+        if(req.body.comments.username && req.body.comments.text == null) {
+            const specificArticle = await Article.findByIdAndUpdate(req.params.id, {
+                $push: {
+                    comments: req.body.comments
+                }
+            });
+            res.status(200).json(specificArticle);
+        }
         const specificArticle = await Article.findByIdAndUpdate(req.params.id, {
             $push: {
                 comments: req.body.comments
