@@ -50,14 +50,14 @@ const ArticlePatch = ({name, closeModal}) => {
         setAuthor('');
         setArticleInfo('');
 
-        // closeModal();
-        // setTimeout(()=> {
-        //     window.location.reload()
-        // }, 100);
+        closeModal();
+        setTimeout(()=> {
+            window.location.reload()
+        }, 100);
     }
 
     return (
-        <div className="formContainer" /*onClick={closeModal}*/>
+        <div className="formContainer" onClick={closeModal}>
             <form className="content" onSubmit={handleSubmit} onClick={(e)=>e.stopPropagation()}>
                 <h1 style={{paddingBottom: "20px", textAlign: "center"}}>Edit Article</h1>
                 <div className="bodyStyle">
