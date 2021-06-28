@@ -2,11 +2,15 @@ import React, { useEffect, useState } from 'react';
 
 const CommentPost = ({name, closeModal}) => {
 
-    const [ comment, setComment ] = useState('');
+    const [ text, setText ] = useState('');
     const [ username, setUsername ] = useState('');
 
-    const [data, setData ] = useState('');
+    // const [ comments , setComments ] = useState({
+    //     usernameValue: '',
+    //     textValue: ''
+    // })
 
+    const [data, setData ] = useState('');
 
    
     const postCommentData = async () => {
@@ -14,22 +18,18 @@ const CommentPost = ({name, closeModal}) => {
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify({
-                comments:[
-                        {
-                            username: username,
-                            text: comment    
-                        }
-                ]
+                    comments: [{
+                        username: username,
+                        text: text
+                    }]
             }),
-            header: {
-                'Content-Type': 'application/json'
+            headers: {
+                'Content-Type' : 'application/json',
             }
         })
-        .then(res=>res.json())
-        .then(data=>{
-            setData(data)
-            console.log(data);
-        })
+        .then(res=>console.log(res))
+        .catch(e=>console.log(e))
+        
     }
     const handleSubmit = e => {
         e.preventDefault();
@@ -37,7 +37,12 @@ const CommentPost = ({name, closeModal}) => {
         postCommentData();
         
         setUsername('');
-        setComment('');
+        setText('');
+
+        // setComments({
+        //     usernameValue: '',
+        //     textValue: ''
+        // })
 
         closeModal();
         setTimeout(()=> {
@@ -66,11 +71,11 @@ const CommentPost = ({name, closeModal}) => {
                         <br />
                         <textarea 
                             style={{resize: "none", maxWidth: "100%"}} 
-                            rows="20" 
-                            cols="50" 
-                            value={comment} 
+                            rows={10} 
+                            cols={50} 
+                            value={text} 
                             placeholder="Great Article!" 
-                            onChange={(e)=>setComment(e.target.value)} 
+                            onChange={(e)=>setText(e.target.value)} 
                             required
                         />
                     </div>
@@ -86,7 +91,51 @@ const CommentPost = ({name, closeModal}) => {
                                 Cancel</button>
                     </div>
             </form>
+            
         </div>
     );
 }
-export default CommentPost;
+
+const UpvoteComment = ({name, upvote}) => {
+
+    const [ count, setCount ] = useState(upvote);
+
+    const PostCommentUpvote = async () => {
+        try {
+                await fetch(`https://oj4m71cxjh.execute-api.us-west-2.amazonaws.com/dev/articles/${name}/comment`, {
+                method: 'POST',
+                mode: 'cors',
+                body: JSON.stringify({
+                    comments:[{
+                        upvote: count
+                    }]
+                }),
+                headers: {
+                    'Content-Type' : 'application/json'
+                }
+            });
+            // const data = await response.json();
+            // setCount(data);
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        setCount(()=>upvote+1)
+        
+        PostCommentUpvote();
+    }
+
+    return (
+        <><button onClick={handleSubmit}>Upvote</button></>
+    );
+}
+
+export  {
+    CommentPost,
+    UpvoteComment
+}
