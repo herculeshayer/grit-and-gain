@@ -51,7 +51,7 @@ const ArticleGetOne = ({name}) => {
             .then((res) => res.json())
             .then((data)=> {
                 setArticleData(data.filter(article => article._id === name))
-                console.log(data)
+                // console.log(data)
             })
             .catch(error=>console.log(error))
     },[])
@@ -65,7 +65,7 @@ const ArticleGetOne = ({name}) => {
                 <h3>Created By: {author}</h3>
                 <p style={{paddingBottom: "50px"}}><h5>Article Information: </h5>{articleInfo}</p>
                 <h6>Upvotes: {upvotes}</h6>
-                <p>Comments: {comments.map((comment, key) => {
+                <>Comments: {comments.map((comment, key) => {
                     const { username, text } = comment;
                     return (
                         <div key={key}>
@@ -73,7 +73,7 @@ const ArticleGetOne = ({name}) => {
                             <p>Text: {text}</p>
                         </div>
                     );
-                })}</p>
+                })}</>
                 
 
 
