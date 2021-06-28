@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 // import ArticlesList from '../pages/ArticlesList';
+import { UpvoteComment } from './CommentPost';
 
 const StyleArticle = {
     textAlign: "center",
@@ -66,11 +67,14 @@ const ArticleGetOne = ({name}) => {
                 <p style={{paddingBottom: "50px"}}><h5>Article Information: </h5>{articleInfo}</p>
                 <h6>Upvotes: {upvotes}</h6>
                 <>Comments: {comments.map((comment, key) => {
-                    const { username, text } = comment;
+                    const { username, text, upvote } = comment;
                     return (
                         <div key={key}>
                             <h1>Username: {username}</h1>
                             <p>Text: {text}</p>
+                            {/* <p>Upvote: {upvote}</p> */}
+                            {/* <UpvoteComment upvote={upvote} name={name}/> */}
+                            {/* <button onClick={()=>upvote+1}>Upvote</button> */}
                         </div>
                     );
                 })}</>
