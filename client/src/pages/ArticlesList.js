@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import { ArticleGetAll } from '../components/ArticleFetch';
+import { ArticleGetAll } from '../components/ArticleGet';
 import ArticlePost from '../components/ArticlePost';
 
 const ArticlesList = () => {

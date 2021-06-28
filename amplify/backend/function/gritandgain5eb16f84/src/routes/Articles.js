@@ -1,4 +1,5 @@
 const express = require('express');
+const { findById, findByIdAndUpdate } = require('../models/Article');
 const router = express.Router();
 
 const Article = require('../models/Article');
@@ -45,6 +46,45 @@ router.post('/', (req, res) => {
         res.status(400).json({message: error.message});
     }
 })
+//Post Comment
+router.post('/:id/comment', async (req, res) => {
+    // const { username, text } = req.body;
+    try {
+        if(req.body.comments.username && req.body.comments.text == null) {
+            const specificArticle = await Article.findByIdAndUpdate(req.params.id, {
+                $push: {
+                    comments: req.body.comments
+                }
+            });
+            res.status(200).json(specificArticle);
+        }
+        const specificArticle = await Article.findByIdAndUpdate(req.params.id, {
+            $push: {
+                comments: req.body.comments
+            }
+        }, { new : true });
+        
+        res.status(200).json(specificArticle);
+
+        
+        // res.status(201).json(specificArticle);
+    } catch (error) {
+        res.status(500).json({message:error.message})
+    }
+})
+//Post Upvote
+router.post('/:id/upvote', async (req, res) => {
+    try {
+        const upvoteArticle = await Article.findByIdAndUpdate(req.params.id, {
+            $set: {
+                upvotes: req.body.upvotes 
+            }
+        })
+        res.status(200).send(upvoteArticle);
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
 
 //Patch One
 router.patch('/:id', async ( req , res ) => {
@@ -52,7 +92,13 @@ router.patch('/:id', async ( req , res ) => {
         if(req.params.id == null) {
             res.status(204).json({message: "article not found"});
         }
-        const patchArticle = await Article.findByIdAndUpdate(req.params.id, res.body())
+        const patchArticle = await Article.findByIdAndUpdate(req.params.id, {
+            $set: {
+                title: req.body.title,
+                author: req.body.author,
+                articleInfo: req.body.articleInfo
+            }
+        })
         res.status(200).json(patchArticle);
     } catch (error) {
         res.status(500).json({message: error.message})

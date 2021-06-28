@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 // import ArticlesList from '../pages/ArticlesList';
+import { UpvoteComment } from './CommentPost';
 
 const StyleArticle = {
     textAlign: "center",
@@ -47,11 +48,11 @@ const ArticleGetOne = ({name}) => {
     const [ articleData, setArticleData ] = useState([]);
     
     useEffect(()=> {
-        fetch('https://oj4m71cxjh.execute-api.us-west-2.amazonaws.com/dev/articles')
+            fetch('https://oj4m71cxjh.execute-api.us-west-2.amazonaws.com/dev/articles')
             .then((res) => res.json())
             .then((data)=> {
                 setArticleData(data.filter(article => article._id === name))
-                console.log(data)
+                // console.log(data)
             })
             .catch(error=>console.log(error))
     },[])
@@ -65,15 +66,18 @@ const ArticleGetOne = ({name}) => {
                 <h3>Created By: {author}</h3>
                 <p style={{paddingBottom: "50px"}}><h5>Article Information: </h5>{articleInfo}</p>
                 <h6>Upvotes: {upvotes}</h6>
-                <p>Comments: {comments.map((comment, key) => {
-                    const { username, text } = comment;
+                <>Comments: {comments.map((comment, key) => {
+                    const { username, text, upvote } = comment;
                     return (
                         <div key={key}>
                             <h1>Username: {username}</h1>
                             <p>Text: {text}</p>
+                            {/* <p>Upvote: {upvote}</p> */}
+                            {/* <UpvoteComment upvote={upvote} name={name}/> */}
+                            {/* <button onClick={()=>upvote+1}>Upvote</button> */}
                         </div>
                     );
-                })}</p>
+                })}</>
                 
 
 

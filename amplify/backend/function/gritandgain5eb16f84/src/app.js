@@ -21,18 +21,19 @@ app.use(express.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
 
 
+
 // Enable CORS for all methods
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Headers", "*")
   next()
 });
-mongoose.connect(`${process.env.MONGO_ATLAS}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true });
+mongoose.connect(`${process.env.MONGO_ATLAS}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 const db = mongoose.connection;
 db.on('error with db', (err)=>console.log(err));
 db.once('db open', ()=>console.log('successful connection'));
 
-console.log('mongoatlas',process.env.MONGO_ATLAS);
+
 app.use('/articles', require('./routes/Articles'))
 
 
