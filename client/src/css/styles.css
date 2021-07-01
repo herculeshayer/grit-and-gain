@@ -42,8 +42,8 @@ nav a:hover {
 }
 
 button {
-    width: 8rem;
-    height: 4rem;
+    width: 6rem;
+    height: 3rem;
     text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.548);
     cursor: pointer;
 }
@@ -96,6 +96,12 @@ body {
     padding-bottom: 15rem;
 }
 
+/*Contact Box CSS*/
+.contactBoxButton {
+    display: inline-block;
+    padding: 10px 20px !important;
+    font-size: 12px;
+}
 
 /*Nav + Footer Media Query*/
 
