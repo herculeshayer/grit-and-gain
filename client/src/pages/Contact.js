@@ -45,7 +45,7 @@ const Contact = () => {
                 <textarea 
                     type="text"
                     value={message}
-                    cols="25"
+                    cols="23"
                     rows="5"
                     onChange={e=>setMessage(e.target.value)}
                     placeholder="Great website, lets get in touch!"/>
