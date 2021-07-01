@@ -21,6 +21,7 @@ body {
 }
 
 
+
 /*NavBar CSS*/
 li {
     display: inline-block;
@@ -94,6 +95,15 @@ body {
     position: relative;
     padding-bottom: 15rem;
 }
+.footerLinks {
+    color: #C2FFE3; 
+    font-size: 32px; 
+    text-decoration: none;
+}
+a:hover {
+    /* background: black; */
+    color:bisque;
+}
 
 /*Contact Box CSS*/
 .contactBoxButton {
@@ -101,6 +111,13 @@ body {
     padding: 10px 20px !important;
     font-size: 12px;
 }
+input:focus {
+    background-color: #ECF4FE;
+}
+textarea:focus {
+    background-color: #ECF4FE;
+}
+
 
 /*Nav + Footer Media Query*/
 
