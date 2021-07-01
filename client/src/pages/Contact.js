@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { FiLinkedin, FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
 
 const Contact = () => {
+
+    const [name, setName] = useState('');
+
 
     return(
         <div>
@@ -19,14 +21,9 @@ const Contact = () => {
                 <input placeholder="JohnDoe@example.com"/>
                 <label>Message: </label>
                 <textarea placeholder="Great website, lets get in touch!"/>
+                <a href="mailto:hhhayer@hotmail.com">Email</a>
             </form>
-            <section style={{fontSize: "50px", marginTop: "20vh", textAlign: "center"}}>
-                <a href="https://ca.linkedin.com/">{<FiLinkedin />}</a>
-                <a href="https://www.facebook.com/">{<FiFacebook />}</a>
-                <a href="https://www.instagram.com/">{<FiInstagram />}</a>
-                <a href="https://twitter.com/?lang=en">{<FiTwitter />}</a>
-
-            </section>
+           
         </div>
     );
 }

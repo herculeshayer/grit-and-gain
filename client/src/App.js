@@ -12,6 +12,9 @@ import DisplaySingleArticle from './pages/DisplaySingleArticle';
 //Navigation Bar
 import NavBar from './NavBar';
 
+//Footer
+import Footer from './Footer';
+
 const mainOverlay = {
   marginTop: "100px"
 }
@@ -27,6 +30,7 @@ function App() {
         
         <Route path="/About-Us" component={AboutUs} />
         <Route path="/Contact" component={Contact} />
+        <Footer />
       </div>
     </Router>
   );

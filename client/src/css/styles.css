@@ -20,6 +20,9 @@ body {
     /* background-color: #484d5c; */
 }
 
+
+
+/*NavBar CSS*/
 li {
     display: inline-block;
     padding: 12px;
@@ -34,7 +37,7 @@ nav a {
     text-decoration: none;
 }
 nav a:hover {
-    background: black;
+    /* background: black; */
     color:bisque;
 }
 
@@ -42,6 +45,7 @@ button {
     width: 8rem;
     height: 4rem;
     text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.548);
+    cursor: pointer;
 }
 button:focus {
     background-color: powderblue;
@@ -79,4 +83,35 @@ button:hover {
 .footerStyle {
     text-align: center;
     padding: 20px;
+}
+
+/*Footer CSS*/
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 15rem;
+}
+
+
+/*Nav + Footer Media Query*/
+
+@media only screen and (max-width: 575px) {
+    p {
+        font-size: 12px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    p {
+        font-size: 12px;
+    }
+    nav a {
+        font-size: 10px;
+    }
 }
