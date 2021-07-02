@@ -17,10 +17,15 @@ h1, h2, h3, h4, h5, h6 {
 html, 
 body {
     background-color: #F9F5E3;
+    margin: 0px auto 0px auto;
+    text-align: center;
     /* background-color: #484d5c; */
 }
 
-
+/*Article List CSS*/
+.ArticleList a:hover {
+    color: black;
+}
 
 /*NavBar CSS*/
 li {
@@ -42,18 +47,22 @@ nav a:hover {
 }
 
 button {
-    width: 6rem;
-    height: 3rem;
-    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.548);
+    width: 8rem;
+    height: 2rem;
+    /* text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.548); */
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 5%;
+    color: #C2FFE3;
+    background-color: #30505F;
+    font-weight: 900;
+    font-family:inherit;
 }
-button:focus {
-    background-color: powderblue;
-    color:rgb(34, 33, 41)
-}
+/* button:focus {
+    background-color: powderblue; 
+    color: #FFCAB1;
+} */
 button:hover {
-    background-color: white;
+    background-color: #44616f;
 }
 
 /*Modal CSS*/
@@ -107,11 +116,11 @@ a:hover {
 }
 
 /*Contact Box CSS*/
-.contactBoxButton {
-    display: inline-block;
-    padding: 10px 20px !important;
-    font-size: 12px;
-}
+/* .contactBoxButton {
+    display: inline-block; 
+    padding: 10px 20px !important; 
+    font-size: 12px; 
+} */
 input:focus {
     background-color: #ECF4FE;
 }
@@ -149,5 +158,14 @@ textarea:focus {
 @media only screen and (min-width: 1325px) {
     .unsplashIMG {
         width: 900px;
+    }
+}
+
+/*Article List Media Query*/
+
+@media only screen and (max-width: 768px) {
+    .ArticleList {
+        min-width: 100px;
+        font-size: 12px;
     }
 }
