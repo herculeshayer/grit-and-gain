@@ -46,6 +46,7 @@ button {
     height: 3rem;
     text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.548);
     cursor: pointer;
+    border-radius: 50%;
 }
 button:focus {
     background-color: powderblue;
