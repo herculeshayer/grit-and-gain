@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 import { ArticleGetOne } from '../components/ArticleGet';
 import ArticleDelete from '../components/ArticleDelete';
 import ArticlePatch from '../components/ArticlePatch';
-import { CommentPost } from '../components/CommentPost';
+
+
+
 
 
 const DisplaySingleArticle = ({match}) => {
@@ -14,15 +16,17 @@ const DisplaySingleArticle = ({match}) => {
    
     return (
         <article>
-            <ArticleDelete name={name} />
-
-            <button onClick={()=>setShowModal(true)}>Edit Article</button>
-            {showModal && <ArticlePatch name={name} closeModal={()=>setShowModal(false)}/>}
+            <div>
+                <button style={{marginBottom: "15px"}} onClick={()=>setShowModal(true)}>Edit Article</button>
+                {showModal && <ArticlePatch name={name} closeModal={()=>setShowModal(false)}/>}
+                <ArticleDelete name={name} />
+            </div>
             
             <ArticleGetOne name={name} />
+            
 
-            <button onClick={()=>setCommentModal(true)}>Add Comment</button>
-            {showCommentModal && <CommentPost name={name} closeModal={()=>setCommentModal(false)}/>}
+            
+            
             
         </article>
     );

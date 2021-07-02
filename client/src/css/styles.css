@@ -17,9 +17,17 @@ h1, h2, h3, h4, h5, h6 {
 html, 
 body {
     background-color: #F9F5E3;
+    margin: 0px auto 0px auto;
+    text-align: center;
     /* background-color: #484d5c; */
 }
 
+/*Article List CSS*/
+.ArticleList a:hover {
+    color: black;
+}
+
+/*NavBar CSS*/
 li {
     display: inline-block;
     padding: 12px;
@@ -34,21 +42,27 @@ nav a {
     text-decoration: none;
 }
 nav a:hover {
-    background: black;
+    /* background: black; */
     color:bisque;
 }
 
 button {
     width: 8rem;
-    height: 4rem;
-    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.548);
+    height: 2rem;
+    /* text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.548); */
+    cursor: pointer;
+    border-radius: 5%;
+    color: #C2FFE3;
+    background-color: #30505F;
+    font-weight: 900;
+    font-family:inherit;
 }
-button:focus {
-    background-color: powderblue;
-    color:rgb(34, 33, 41)
-}
+/* button:focus {
+    background-color: powderblue; 
+    color: #FFCAB1;
+} */
 button:hover {
-    background-color: white;
+    background-color: #44616f;
 }
 
 /*Modal CSS*/
@@ -79,4 +93,79 @@ button:hover {
 .footerStyle {
     text-align: center;
     padding: 20px;
+}
+
+/*Footer CSS*/
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 15rem;
+}
+.footerLinks {
+    color: #C2FFE3; 
+    font-size: 32px; 
+    text-decoration: none;
+}
+a:hover {
+    /* background: black; */
+    color:bisque;
+}
+
+/*Contact Box CSS*/
+/* .contactBoxButton {
+    display: inline-block; 
+    padding: 10px 20px !important; 
+    font-size: 12px; 
+} */
+input:focus {
+    background-color: #ECF4FE;
+}
+textarea:focus {
+    background-color: #ECF4FE;
+}
+
+
+/*Nav + Footer Media Query*/
+
+@media only screen and (max-width: 575px) {
+    p {
+        font-size: 12px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    p {
+        font-size: 12px;
+    }
+    nav a {
+        font-size: 10px;
+    }
+}
+
+/*Image Media Query*/
+
+@media only screen and (max-width: 575px) {
+    .unsplashIMG {
+        width: 250px;
+    }
+}
+@media only screen and (min-width: 1325px) {
+    .unsplashIMG {
+        width: 900px;
+    }
+}
+
+/*Article List Media Query*/
+
+@media only screen and (max-width: 768px) {
+    .ArticleList {
+        min-width: 100px;
+        font-size: 12px;
+    }
 }
