@@ -13,16 +13,26 @@ const StyleArticle = {
 
 const ArticleGetAll = () => {
     const [ articleData, setArticleData ] = useState([]);
+    const [ loading, setLoading ] = useState(false);
     
     useEffect(()=> {
         fetch('https://oj4m71cxjh.execute-api.us-west-2.amazonaws.com/dev/articles')
             .then((res) => res.json())
             .then((data)=> {
+                setLoading(true)
                 setArticleData(data)
                 console.log(data)
             })
             .catch(error=>console.log(error))
     },[])
+
+    if(loading==false) {
+        return (
+            <h1>
+                Articles are loading..
+            </h1>
+        );
+    }
     
     const mapData = articleData.map((article, key) => {
         const {_id, title, author} = article;
@@ -37,7 +47,7 @@ const ArticleGetAll = () => {
     return (
         <div style={StyleArticle}> 
             <h1>Articles</h1>
-            {mapData}
+            {loading&&mapData}
         </div>
     );
 
