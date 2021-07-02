@@ -19,7 +19,7 @@ const ArticleDelete = ({name}) => {
     
     return(
         <div>
-            <button onClick={()=>handleSubmit()}>Delete Article</button>
+            <button style={{marginBottom: "15px"}} onClick={()=>handleSubmit()}>Delete Article</button>
         </div>
     );
 }
