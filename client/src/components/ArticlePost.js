@@ -68,7 +68,7 @@ const ArticlePost = ({closeModal}) => {
         //refresh page after 100ms upon form submit
         setTimeout(()=> {
             window.location.reload()
-        }, 100);
+        }, 1000);
         
     }
     
