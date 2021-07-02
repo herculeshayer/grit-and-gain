@@ -1,41 +1,45 @@
 import React from 'react';
 
+import { GoPrimitiveDot } from 'react-icons/go'
+
+
+
+
 
 const HomePage = () => {
     return(
-        <main>
+        <main className="homepage">
             <h1>Welcome to Grit & Gain</h1>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla lobortis ex, in ullamcorper tellus sagittis eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque at nisl vitae urna congue ultricies. Nunc vel mauris pharetra, efficitur dolor quis, rutrum neque. Proin augue neque, cursus et accumsan a, ultricies a est. Duis euismod porta neque. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae erat ex. Curabitur a urna imperdiet, ullamcorper risus eu, porttitor lectus. Maecenas a egestas nulla. Etiam tincidunt faucibus orci. Pellentesque orci metus, imperdiet ac rhoncus nec, iaculis eu purus. Aliquam ut fermentum est, a posuere felis.
-
-Suspendisse dapibus accumsan blandit. Duis lectus massa, malesuada et sem nec, ultrices luctus sapien. Donec elit nunc, accumsan quis urna eu, tincidunt facilisis magna. Praesent ut dictum diam, quis eleifend urna. In eget ultricies ipsum. Suspendisse potenti. Nam ut diam dolor. Vestibulum viverra commodo luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec luctus neque et egestas tempus. Nullam lorem sem, ultricies id ullamcorper ac, consectetur vel augue. Sed scelerisque ante sed porta sagittis. Etiam feugiat dictum luctus. In eu lectus nibh. Quisque eget interdum orci. Integer rutrum nulla sed malesuada hendrerit.
-
-Ut in nibh id lorem venenatis porta a eget odio. Mauris et semper ipsum. Nam consequat lacinia finibus. Mauris felis lacus, vestibulum ac elit in, porta auctor ante. Duis bibendum ligula non ipsum aliquet, eu lacinia eros laoreet. Cras non ornare metus. Suspendisse finibus mollis tempor. Cras iaculis dolor id hendrerit cursus. Proin eget dolor mauris. Sed cursus, justo non aliquam tincidunt, tellus mi imperdiet nunc, ac dapibus metus massa non ligula.
-
-Donec tempus massa diam, quis posuere quam euismod ac. <br/><br/>Phasellus facilisis dictum fermentum. Nunc ac luctus nulla. Sed feugiat faucibus nulla, id eleifend lacus pulvinar non. Sed velit libero, fringilla nec diam non, venenatis suscipit sapien. Morbi quis aliquam lectus, at aliquam nibh. Nulla nulla sem, ultricies nec accumsan ac, pretium nec purus. Mauris odio quam, molestie at elit sit amet, venenatis euismod sapien. Vestibulum a eros sed lorem tempus consequat. Mauris mattis egestas ornare. Donec iaculis elit ut leo consequat molestie. Sed nunc lorem, dignissim et sem eu, pretium elementum metus.
-
-Praesent non purus fermentum, feugiat erat quis, placerat sapien. Morbi sodales pulvinar lectus, sit amet blandit mauris aliquam in. Aliquam euismod, metus eu feugiat pellentesque, magna risus eleifend mauris, a volutpat odio tortor sed justo. Nunc porta vitae augue nec interdum. Cras ullamcorper neque vel elit pretium, ut finibus leo convallis. Proin quis dapibus nisl, eget finibus massa. Aenean elementum erat vitae augue venenatis porttitor.
-
-Fusce ligula orci, placerat mattis ipsum sit amet, tincidunt aliquet felis. In nunc ante, bibendum vel nisi ac, hendrerit vehicula nunc. Aenean mollis erat vitae mauris lacinia sodales. Suspendisse dignissim lacus orci, ut rutrum odio lacinia quis. Maecenas vitae dui mi. Donec faucibus enim risus, nec tincidunt ante euismod ac. In nec ligula risus. Morbi felis felis, posuere sed bibendum quis, sagittis non mauris. Quisque rutrum eleifend urna vel vehicula. In dui nibh, ultricies eu eleifend vel, gravida in enim. Duis dictum mi nisi, at vehicula enim feugiat consectetur. Sed nec feugiat diam. Duis fermentum sodales augue id elementum.
-
-Nam diam justo, dapibus at nunc ut, scelerisque ullamcorper quam. Morbi placerat nulla sem. Mauris quis lectus lobortis, accumsan ante vel, rutrum turpis. Nam non tortor accumsan, blandit metus nec, efficitur orci. Maecenas molestie ex lorem, vitae bibendum lectus facilisis a. Aliquam tempor tortor pulvinar scelerisque sodales. Morbi sodales sodales diam, sit amet euismod dolor sodales eu. Etiam sed erat et leo tempus tincidunt eu ac ipsum. Nullam laoreet dolor vitae erat pretium rutrum. Mauris vulputate, mauris nec euismod pharetra, nisl mi condimentum magna, a venenatis lectus ligula nec enim. In hac habitasse platea dictumst. Donec eleifend efficitur nisl vitae bibendum. Morbi nisl quam, elementum a sagittis quis, varius in dolor.
-
-Cras tellus libero, rhoncus a libero nec, egestas aliquam tellus. Praesent eu eleifend velit. Donec quis neque nec odio posuere dictum in vel tellus. Aenean nunc metus, posuere vitae ante ac, varius maximus dui. Ut ut justo blandit dolor ornare auctor. Aliquam molestie ligula tellus, sit amet tincidunt urna suscipit vitae. In eu fringilla neque. Donec vitae cursus purus. Mauris at tellus quis justo tempus molestie in vitae diam. Fusce a porttitor sem. Nunc non tempus mi, et sagittis elit. Morbi nisi enim, auctor in ligula sed, commodo convallis ipsum. Suspendisse potenti.
-
-Praesent vel leo ligula. Sed a dignissim quam, vel tristique turpis. <br/><br/>In sit amet mauris erat. Morbi posuere dolor sit amet turpis viverra, vel scelerisque mi ornare. Integer nibh ligula, auctor elementum nisi ut, laoreet laoreet erat. Aenean quis nisl lorem. Suspendisse eget scelerisque enim. Donec ac interdum turpis. Aenean finibus congue pharetra. Donec at urna et urna finibus vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin molestie finibus tristique.
-
-Fusce volutpat arcu a condimentum fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus a condimentum neque. Fusce vitae ultrices dolor. Curabitur aliquam velit risus, sit amet consectetur sapien fermentum sed. Fusce porta sed purus ornare lacinia. Nullam venenatis bibendum nisl quis imperdiet. Phasellus et nibh urna. Nam nec est sem. Nam scelerisque augue ut libero efficitur, at rutrum est porta. In consectetur aliquet scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse eu tincidunt est. Maecenas sit amet nunc suscipit, lobortis quam ac, maximus quam. Suspendisse a rutrum risus.
-
-Duis mi ante, posuere sed rhoncus non, ultricies quis velit. Praesent viverra accumsan velit vitae scelerisque. Nam facilisis maximus augue, a pulvinar felis faucibus sit amet. Quisque sollicitudin lorem ac odio molestie auctor. Curabitur luctus arcu efficitur nunc feugiat, id mattis erat congue. Phasellus et sollicitudin sem, sed ultricies nulla. Cras eget lacus placerat, dapibus dolor quis, auctor velit. Pellentesque volutpat, sem ut scelerisque fringilla, nulla tortor aliquet dui, eu tincidunt elit erat id mi. Nunc velit urna, faucibus in semper at, mollis et dolor. Proin posuere purus mi, vitae sagittis felis consectetur et. Mauris finibus erat eget rhoncus tristique. Quisque sed dapibus metus, sed condimentum mauris.
-
-Suspendisse consectetur, nibh nec scelerisque blandit, leo lorem euismod elit, quis vehicula neque tellus vitae arcu. Ut ac enim sit amet est faucibus maximus vel vitae enim. Nam quis mi non libero porttitor volutpat id in purus. Etiam non ex aliquam risus tincidunt viverra id quis nisi. Maecenas porttitor magna metus, vel egestas ipsum sodales vel. In dictum urna tortor, quis ultricies nisl lacinia at. Fusce nec fringilla dui, at pretium nisi. Integer lobortis leo massa. Donec imperdiet congue felis nec ultricies.
-
-Nunc feugiat venenatis eros, a semper mauris hendrerit ut. <br/><br/>Vestibulum ut dignissim sem. Aliquam erat volutpat. Fusce ut aliquam ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed et viverra tellus, a lobortis elit. Nullam sollicitudin mauris eu massa elementum, ac vulputate metus posuere. In id pellentesque neque. Pellentesque ac lacus vel nisl elementum vulputate. Mauris aliquet ligula mauris. Fusce pharetra sollicitudin sem sed interdum. Vivamus scelerisque elit ac ex luctus, in interdum sem cursus. Cras eu sollicitudin mi. Sed rutrum orci leo, ut condimentum est tincidunt ac. Proin faucibus laoreet turpis et faucibus. Nunc congue dui a pretium euismod.
-
-Aenean bibendum facilisis aliquet. In fringilla euismod justo at elementum. Maecenas eu ex tempor ante maximus varius. Vivamus lobortis nisi eros, sed sagittis dolor mattis ac. Duis feugiat ornare massa et volutpat. Vestibulum libero ante, consectetur ac efficitur faucibus, ultrices lobortis ligula. Morbi efficitur, nibh a molestie vulputate, enim urna congue ante, sit amet ultricies eros nisl id justo. Ut laoreet ultricies hendrerit. Nulla aliquet, dui eget pellentesque facilisis, nulla velit condimentum libero, sed maximus eros libero nec dolor. Vivamus eget tristique dui.
-
-Sed feugiat lorem id mauris faucibus bibendum mollis quis est. Pellentesque non sodales erat. Proin augue turpis, malesuada porttitor ex in, imperdiet imperdiet neque. Sed commodo euismod purus, sed vulputate augue. Donec pellentesque libero vel ex sollicitudin, quis accumsan nisi suscipit. Nam sollicitudin posuere mauris nec imperdiet. Aliquam faucibus vel lectus sed ultricies. Donec luctus leo nisi, non imperdiet arcu gravida id. Nulla ac dolor sem. Aenean enim ipsum, dignissim ac magna condimentum, consequat aliquam elit. Fusce sit amet arcu semper, pellentesque mauris non, ultricies purus. Praesent venenatis convallis diam, quis scelerisque lectus vestibulum eget. Vivamus sollicitudin cursus ligula. Nullam convallis augue rhoncus felis varius, sit amet porta urna maximus. Etiam a viverra magna, eu ultrices dui.
+                This is a M.E.R.N. stack C.R.U.D. application. Users can create, read, update, and delete articles.
+                <br/>Source code for this application can be found <a href="https://github.com/herculeshayer/grit-and-gain">here</a>.
+                <br/>My portfolio website can be found <a href="https://hhayer.me/">here</a>.
             </p>
+            <p>The technologies used on this application were:</p>
+            
+            <section style={{margin:"20px 0px 20px 10vw", textAlign: "left"}}>
+                <p><GoPrimitiveDot /> ReactJS</p>
+                <p><GoPrimitiveDot /> MongoDB + MongoDB Atlas + MongooseJS</p>
+                <p><GoPrimitiveDot /> NodeJS + ExpressJS</p>
+                <p><GoPrimitiveDot /> AWS Lambda + API Gateway + Amplify + IAM</p>
+                <p><GoPrimitiveDot /> HTML + CSS + JavaScript</p>
+                <p><GoPrimitiveDot /> Git</p>
+                {/* <p><GoPrimitiveDot /> Unit Testing</p> */}
+            </section>
+
+            
+            <p>
+                This is my first undertaking on an application of this scale; I've only ever completed small projects & assignments.
+                Over the duration of this application, I've gained scope for the necessities of  project planning ahead
+                and the difficulties it can present if not flawlessly. I've learned numerous technologies, and several 
+                lessons on not only how to architect a project but also how to problem solve.
+            </p>
+            <p>
+                Thanks for checking out the website, I hope you enjoyed it!
+                <br/>If you've got any questions or criticism please address them to
+                my <a href="https://github.com/herculeshayer/">GitHub</a>.
+            </p>
+            
 
         </main>
     );

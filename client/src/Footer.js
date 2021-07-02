@@ -39,7 +39,7 @@ const Footer = () => {
                 <img src={pyreImage} width="75px" alt="pyre svg - website icon" />
             </div>
             <div style={footerItem}>
-                <p >Website Designed<br/> & Created By: <br/><a className="footerLinks" href="https://www.github.com/herculeshayer"><strong>Harman </strong></a></p>
+                <p >Website Designed<br/> & Created By: <br/><a className="footerLinks" href="https://www.github.com/herculeshayer"><b>Harman</b></a></p>
             </div>
             <div style={footerItem}>
                 <p>Follow Us On Social Media:</p>
