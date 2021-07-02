@@ -1,35 +1,5 @@
 import React, {useState} from 'react';
 
-// const formContainer = {
-//     position: "fixed",
-//     top: "0",
-//     left: "0",
-//     right: "0",
-//     bottom: "0",
-//     backgroundColor: "rgba(0,0,0,0.5)",
-//     display: "flex",
-//     alignItems: "center",
-//     justifyContext: "center",
-    
-//     // opacity:"0",
-//     // transition: "all 0.3s ease-in-out"
-// }
-
-// const content = { 
-//     width: "40%",
-//     backgroundColor: "white",
-//     margin: "0 auto",
-//     borderRadius: "25px"
-// }
-
-// const body = {
-//     textAlign: "center"
-// }
-
-// const footer = {
-//     textAlign: "center",
-//     padding: "20px",
-// }
 
 const ArticlePost = ({closeModal}) => {
     const [ title, setTitle ] = useState('');
@@ -65,7 +35,7 @@ const ArticlePost = ({closeModal}) => {
         setArticleInfo('');
         closeModal();
 
-        //refresh page after 100ms upon form submit
+        //refresh page after 1000ms upon form submit
         setTimeout(()=> {
             window.location.reload()
         }, 1000);
