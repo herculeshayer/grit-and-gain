@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 // import ArticlesList from '../pages/ArticlesList';
 import { UpvoteComment } from './CommentPost';
 
+import { CommentPost } from '../components/CommentPost';
 const StyleArticle = {
     textAlign: "center",
 }
@@ -26,7 +27,7 @@ const ArticleGetAll = () => {
     const mapData = articleData.map((article, key) => {
         const {_id, title, author} = article;
         return (
-            <div key={key}>
+            <div key={key} style={{margin: "10px auto 10px auto"}} className="ArticleList">
                 <Link style={{display: "inline-block", padding:"5px"}} to={`/article/${_id}`}><h2>{title}</h2></Link>
                 <p style={{fontSize: "18px", display: "inline-block", marginLeft: "15px"}}>{`by ${author}`}</p>
             </div>
@@ -43,9 +44,37 @@ const ArticleGetAll = () => {
 }
 
 
+const ArticleTitleAuthor = {
+    marginRight: "0px auto 0px auto",
+    
+}
+const ArticleInfoStyling = {
+    margin: "20px auto 0px auto",
+    
+    width: "50%",
+    backgroundColor: "white",
+    border: "solid black 3px",
+    borderRadius: "0%"
+}
+const CommentStyling = {
+    margin: "0px auto 10px auto",
+   
+    width: "25%",
+    backgroundColor: "white",
+    border: "solid black 3px",
+
+}
+const Comment = {
+    marginTop: "30px",
+    // marginLeft: "30vw",
+    display: "inline-block",
+}
+
 
 const ArticleGetOne = ({name}) => {
     const [ articleData, setArticleData ] = useState([]);
+    
+    const [showCommentModal, setCommentModal ] = useState(false);
     
     useEffect(()=> {
             fetch('https://oj4m71cxjh.execute-api.us-west-2.amazonaws.com/dev/articles')
@@ -61,26 +90,38 @@ const ArticleGetOne = ({name}) => {
     const mapArticleData = articleData.map((article, key) => {
         const {title, articleInfo, author, comments, upvotes} = article;
         return(
-            <div key={key} style={{StyleArticle}}>
-                <h1>Article: {title}</h1>
-                <h3>Created By: {author}</h3>
-                <p style={{paddingBottom: "50px"}}><h5>Article Information: </h5>{articleInfo}</p>
-                <h6>Upvotes: {upvotes}</h6>
-                <>Comments: {comments.map((comment, key) => {
-                    const { username, text, upvote } = comment;
-                    return (
-                        <div key={key}>
-                            <h1>Username: {username}</h1>
-                            <p>Text: {text}</p>
-                            {/* <p>Upvote: {upvote}</p> */}
-                            {/* <UpvoteComment upvote={upvote} name={name}/> */}
-                            {/* <button onClick={()=>upvote+1}>Upvote</button> */}
-                        </div>
-                    );
-                })}</>
-                
+            <div key={key}>
+                <section style={ArticleTitleAuthor}>
+                    <h1>Name: {title}</h1>
+                    <h3>Created By: {author}</h3>
+                    <h6>Upvotes: {upvotes}</h6>
+                    <div style={ArticleInfoStyling}>
+                        <p style={{paddingBottom: "50px"}}><h5>Article Information: </h5>{articleInfo}</p>
+                    </div>
+                </section>
 
+                <section >
 
+                    <div style={Comment}>
+                        <button onClick={()=>setCommentModal(true)}>Add Comment</button>
+                        {showCommentModal && <CommentPost name={name} closeModal={()=>setCommentModal(false)}/>}
+                    </div>
+
+                    <div style={{marginTop: "20px"}}>
+                        <h1 style={{marginRight: "auto", marginLeft: "auto", textAlign: "center", marginBottom: "20px"}}>Comments:</h1> {comments.map((comment, key) => {
+                        const { username, text, upvote } = comment;
+                        return (
+                            <div key={key} style={CommentStyling}>
+                                <p><b>Name:</b> {username}</p>
+                                <p><b>Comment:</b> {text}</p>
+                                {/* <p>Upvote: {upvote}</p> */}
+                                {/* <UpvoteComment upvote={upvote} name={name}/> */}
+                                {/* <button onClick={()=>upvote+1}>Upvote</button> */}
+                            </div>
+                        );
+                        })}
+                    </div>
+                </section>
             </div>
         );
     })
