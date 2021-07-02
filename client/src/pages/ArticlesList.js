@@ -25,10 +25,11 @@ const ArticlesList = () => {
         <>
             <section style={ArticleTitle}>
                 <h3>This is the articles page</h3>
-                <p>Below are a few articles which you can view</p>
+                <p>On this page, you'll be able to create an article, edit/delete the article, and comment on it.</p>
+                <p>All articles created are presented below.</p>
                 <button style={{marginBottom: "18vh", marginTop: "3vh"}} onClick={()=> setShowModal(true)}>Create Article</button>
             </section>
-            <div style={ArticleContainer}>
+            <div style={ArticleContainer} className="ArticleList">
                 {showModal && <ArticlePost closeModal={()=>setShowModal(false)}/>}
                 <ArticleGetAll />
             </div>
