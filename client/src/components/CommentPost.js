@@ -47,7 +47,7 @@ const CommentPost = ({name, closeModal}) => {
         closeModal();
         setTimeout(()=> {
             window.location.reload()
-        }, 100);
+        }, 1000);
     }
 
     return(
@@ -55,7 +55,7 @@ const CommentPost = ({name, closeModal}) => {
             <form className="content" onSubmit={handleSubmit} onClick={(e)=>e.stopPropagation()}>
                     <h1 style={{paddingBottom: "20px", textAlign: "center"}}>Add Comment</h1>
                     <div className="bodyStyle">
-                        <label>Username: </label>
+                        <label>Name: </label>
                         <input
                             style={{width: "60%", maxWidth: "100%"}} 
                             type="text" 
@@ -67,7 +67,7 @@ const CommentPost = ({name, closeModal}) => {
                         />
                         <br/>
                         
-                        <label>Text: </label>
+                        <label>Comment: </label>
                         <br />
                         <textarea 
                             style={{resize: "none", maxWidth: "100%"}} 
