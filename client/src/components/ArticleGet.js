@@ -24,11 +24,11 @@ const ArticleGetAll = () => {
     },[])
     
     const mapData = articleData.map((article, key) => {
-        const {_id, title} = article;
+        const {_id, title, author} = article;
         return (
             <div key={key}>
                 <Link style={{display: "inline-block", padding:"5px"}} to={`/article/${_id}`}><h2>{title}</h2></Link>
-                <br />
+                <p style={{fontSize: "18px", display: "inline-block", marginLeft: "15px"}}>{`by ${author}`}</p>
             </div>
         );
     })
