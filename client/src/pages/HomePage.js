@@ -11,7 +11,7 @@ const HomePage = () => {
         <main className="homepage">
             <h1>Welcome to Grit & Gain</h1>
             <p>
-                This is a M.E.R.N. stack C.R.U.D. application. It uses AWS Amplify to host both its frontend clientside & backend serverside code.
+                This is a M.E.R.N. stack C.R.U.D. application. Users can create, read, update, and delete articles.
                 <br/>Source code for this application can be found <a href="https://github.com/herculeshayer/grit-and-gain">here</a>.
                 <br/>My portfolio website can be found <a href="https://hhayer.me/">here</a>.
             </p>
