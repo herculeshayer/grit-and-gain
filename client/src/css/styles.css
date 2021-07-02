@@ -21,11 +21,38 @@ body {
     text-align: center;
     /* background-color: #484d5c; */
 }
+p {
+    margin: 0px 6vw 0px 6vw;
+}
+h1 {
+    margin-bottom: 30px;
+}
+
+/*HomePage Styling*/
+
+.homepage > p {
+    margin-top: 2vw !important;
+    margin-bottom: 2vw !important;
+    
+}
+
+@media only screen and (min-width: 1440px){
+    .homepage p {
+        margin: 0vw 20vw 0vw 20vw;
+    }
+}
+
 
 /*Article List CSS*/
 .ArticleList a:hover {
     color: black;
 }
+@media only screen and (max-width: 500px) {
+    .ArticleList {
+        width: 70% !important;
+    }
+}
+
 
 /*NavBar CSS*/
 li {
@@ -139,12 +166,15 @@ textarea:focus {
         font-size: 14px;
     }
 }
-@media only screen and (max-width: 325px) {
+@media only screen and (max-width: 405px) {
     p {
-        font-size: 12px;
+        font-size: 10px;
     }
     nav a {
-        font-size: 10px;
+        font-size: 12px;
+    }
+    a b {
+        font-size: 12px;
     }
 }
 
