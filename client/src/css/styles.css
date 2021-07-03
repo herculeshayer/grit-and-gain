@@ -22,7 +22,7 @@ body {
     /* background-color: #484d5c; */
 }
 p {
-    margin: 0px 6vw 0px 6vw;
+    margin: 0px 10vw 0px 10vw;
 }
 h1 {
     margin-bottom: 30px;
@@ -53,6 +53,11 @@ h1 {
     }
 }
 
+/*Comments Styling*/
+.comment-alteration {
+    margin: 0vw;
+    padding: 5%;
+}
 
 /*NavBar CSS*/
 li {
