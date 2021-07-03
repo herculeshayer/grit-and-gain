@@ -5,7 +5,11 @@ const router = express.Router();
 const Article = require('../models/Article');
 
 
-//Get All
+/*
+    This endpoint will serve as a GET all route
+    It will find and respond with all article data 
+    found inside the database
+*/
 router.get('/', async ( req, res ) => {
     try {
         const articles = await Article.find();
@@ -15,7 +19,14 @@ router.get('/', async ( req, res ) => {
     } 
 })
 
-//Get One
+/*
+    GET a single article
+    Endpoint will attempt to find the id passed
+    to it through the request parameter
+    If the article is not present, an error message is sent as 
+    a response, otherwise the article found is sent as
+    a response
+*/
 router.get('/:id', async ( req , res ) => {
     const name = req.params.id;
     try {
@@ -30,7 +41,11 @@ router.get('/:id', async ( req , res ) => {
     }
 })
 
-//Post One
+/*
+    POST a single article
+    All data in the request body is saved
+    inside the Mongo Database, schema is produced with Mongoose
+*/
 router.post('/', (req, res) => {
     const reqArticle = new Article({
         title: req.body.title,
@@ -46,7 +61,11 @@ router.post('/', (req, res) => {
         res.status(400).json({message: error.message});
     }
 })
-//Post Comment
+/*
+    POST a comment in a specific article
+    The comment is pushed into the article comment
+    section
+*/
 router.post('/:id/comment', async (req, res) => {
     // const { username, text } = req.body;
     try {
@@ -72,7 +91,9 @@ router.post('/:id/comment', async (req, res) => {
         res.status(500).json({message:error.message})
     }
 })
-//Post Upvote
+/*
+    Update the upvote # inside the DB by 1
+*/
 router.post('/:id/upvote', async (req, res) => {
     try {
         const upvoteArticle = await Article.findByIdAndUpdate(req.params.id, {
@@ -86,7 +107,10 @@ router.post('/:id/upvote', async (req, res) => {
     }
 })
 
-//Patch One
+/*
+    Find a specific article, and update its title,author,articleINFO
+    If the article is not found, an error message is presented
+*/ 
 router.patch('/:id', async ( req , res ) => {
     try {
         if(req.params.id == null) {
@@ -104,7 +128,10 @@ router.patch('/:id', async ( req , res ) => {
         res.status(500).json({message: error.message})
     }
 })
-//Delete One
+/*
+    DELETE request, this endpoint will attempt to find an article
+    by its id and delete it
+*/
 router.delete('/:id', async ( req , res ) => {
 
     try {
