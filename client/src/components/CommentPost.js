@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+/**
+ * 
+ * @param {string} param0  - article endpoint id, used to locate article from API
+ * @param {function()} param0 - function closes modal once invoked
+ * @returns - a form field that allows comments to be posted to the API
+ */
+
 const CommentPost = ({name, closeModal}) => {
 
     const [ text, setText ] = useState('');

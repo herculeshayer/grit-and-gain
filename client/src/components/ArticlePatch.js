@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 
-
+/**
+ * Edit an existing article, 
+ * @param {string} param0 - article endpoint id, used to locate article from API
+ * @param {function()} param0 - function closes modal once invoked
+ * @returns - edited article: title, author, articleInfo
+ */
 const ArticlePatch = ({name, closeModal}) => {
     
     
