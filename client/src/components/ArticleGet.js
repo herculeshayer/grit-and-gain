@@ -102,8 +102,8 @@ const ArticleGetOne = ({name}) => {
         return(
             <div key={key}>
                 <section style={ArticleTitleAuthor}>
-                    <h1>Name: {title}</h1>
-                    <h3>Created By: {author}</h3>
+                    <h2>Title: {title}</h2>
+                    <h3>By: {author}</h3>
                     <h6>Upvotes: {upvotes}</h6>
                     <div style={ArticleInfoStyling}>
                         <p style={{paddingBottom: "50px"}}><h5>Article Information: </h5>{articleInfo}</p>
@@ -122,8 +122,8 @@ const ArticleGetOne = ({name}) => {
                         const { username, text, upvote } = comment;
                         return (
                             <div key={key} style={CommentStyling}>
-                                <p><b>Name:</b> {username}</p>
-                                <p><b>Comment:</b> {text}</p>
+                                <p className="comment-alteration"><b>{username}</b>: {text}</p>
+                                {/* <p><b>Comment:</b> {text}</p> */}
                                 {/* <p>Upvote: {upvote}</p> */}
                                 {/* <UpvoteComment upvote={upvote} name={name}/> */}
                                 {/* <button onClick={()=>upvote+1}>Upvote</button> */}
