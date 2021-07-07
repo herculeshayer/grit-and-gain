@@ -119,6 +119,7 @@ button:hover {
     background-color:white;
     margin: 0 auto;
     border-radius: 25px;
+    max-width: 600px;
 }
 
 .bodyStyle {
@@ -128,6 +129,12 @@ button:hover {
 .footerStyle {
     text-align: center;
     padding: 20px;
+}
+
+@media only screen and (max-width: 575px) {
+    .content {
+        width: 80%;
+    }
 }
 
 /*Footer CSS*/

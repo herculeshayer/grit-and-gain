@@ -47,7 +47,7 @@ const Footer = () => {
                     <a style={{marginRight: "15px"}} href="https://ca.linkedin.com/">{<FiLinkedin />}</a>
                     <a style={{marginRight: "15px"}} href="https://www.facebook.com/">{<FiFacebook />}</a>
                     <a style={{marginRight: "15px"}} href="https://www.instagram.com/">{<FiInstagram />}</a>
-                    <a style={{marginRight: "15px"}} href="https://twitter.com/?lang=en">{<FiTwitter />}</a>
+                    <a href="https://twitter.com/?lang=en">{<FiTwitter />}</a>
                 </nav>
                 
             </div>
