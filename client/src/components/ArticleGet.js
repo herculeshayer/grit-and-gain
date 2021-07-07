@@ -69,7 +69,8 @@ const ArticleInfoStyling = {
     width: "50%",
     backgroundColor: "white",
     border: "solid black 3px",
-    borderRadius: "0%"
+    borderRadius: "0%",
+    maxWidth: "600px"
 }
 const CommentStyling = {
     margin: "0px auto 10px auto",

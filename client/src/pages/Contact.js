@@ -8,7 +8,7 @@ const contactBoxContainer = {
     marginTop: "55px",
     textAlign: "center",
     border: "solid black 1px",
-    borderRadius: "20%"
+    // borderRadius: "20%"
 }
 
 const Contact = () => {

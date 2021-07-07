@@ -9,7 +9,7 @@ const ArticleContainer = {
     margin: "0px auto 0px auto",
     width: "50%",
     maxWidth: "500px",
-    borderRadius: "15%",
+    // borderRadius: "15%",
     border: "solid black 3px"
 
 }
