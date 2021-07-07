@@ -1,5 +1,10 @@
 import React, {useState} from 'react';
 
+/**
+ * 
+ * @param {function()} param0 - function closes modal once invoked
+ * @returns - a form field that POSTs data to the API
+ */
 
 const ArticlePost = ({closeModal}) => {
     const [ title, setTitle ] = useState('');

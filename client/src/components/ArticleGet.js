@@ -10,6 +10,11 @@ const StyleArticle = {
     textAlign: "center",
 }
 
+/**
+ * 
+ * @returns All ArticleData found at RESTful API endpoint
+ * The data received is then mapped & displayed using JSX 
+ */
 
 const ArticleGetAll = () => {
     const [ articleData, setArticleData ] = useState([]);
@@ -39,7 +44,7 @@ const ArticleGetAll = () => {
         return (
             <div key={key} style={{margin: "10px auto 10px auto"}} className="ArticleList">
                 <Link style={{display: "inline-block", padding:"5px"}} to={`/article/${_id}`}><h2>{title}</h2></Link>
-                <p style={{fontSize: "18px", display: "inline-block", marginLeft: "15px"}}>{`by ${author}`}</p>
+                <p style={{fontSize: "18px", display: "inline-block"}}>{`by ${author}`}</p>
             </div>
         );
     })
@@ -80,6 +85,11 @@ const Comment = {
     display: "inline-block",
 }
 
+/**
+ * 
+ * @param {string} name - article endpoint id 
+ * @returns A single article corresponding to the parameter value passed
+ */
 
 const ArticleGetOne = ({name}) => {
     const [ articleData, setArticleData ] = useState([]);

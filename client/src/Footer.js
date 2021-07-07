@@ -42,7 +42,7 @@ const Footer = () => {
                 <p >Website Designed<br/> & Created By: <br/><a className="footerLinks" href="https://www.github.com/herculeshayer"><b>Harman</b></a></p>
             </div>
             <div style={footerItem}>
-                <p>Follow Us On Social Media:</p>
+                {/* <p>Follow Us On Social Media:</p> */}
                 <nav style={{fontSize: "2rem", marginTop: "15px"}}>
                     <a style={{marginRight: "15px"}} href="https://ca.linkedin.com/">{<FiLinkedin />}</a>
                     <a style={{marginRight: "15px"}} href="https://www.facebook.com/">{<FiFacebook />}</a>

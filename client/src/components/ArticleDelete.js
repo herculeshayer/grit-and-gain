@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
+/*
+    This function will attempt to send a DELETE request to a 
+    specific endpoint on an API
+    id endpoint parameter is passed to ArticleDelete as {name}
+*/
+
 const ArticleDelete = ({name}) => {
     const [ status, setStatus ] = useState('');
     const deleteArticle = async () => {
@@ -8,6 +14,7 @@ const ArticleDelete = ({name}) => {
         })
         .then(() => setStatus('Article Successfully Deleted'));
     }
+    //Submit event handler
     const handleSubmit = () => {
         
         deleteArticle();

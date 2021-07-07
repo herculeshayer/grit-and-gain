@@ -28,16 +28,21 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "*")
   next()
 });
+/*
+  Connect to MongoDB Atlas instance using Environment Variables
+*/ 
 mongoose.connect(`${process.env.MONGO_ATLAS}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 const db = mongoose.connection;
 db.on('error with db', (err)=>console.log(err));
 db.once('db open', ()=>console.log('successful connection'));
 
-
+/*
+  use express route articles
+*/
 app.use('/articles', require('./routes/Articles'))
 
 
-
+/* Start server and listen on port 3000 */
 app.listen(3000, function() {
     console.log("App started")
 });

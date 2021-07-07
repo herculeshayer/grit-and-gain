@@ -44,6 +44,9 @@ h1 {
 
 
 /*Article List CSS*/
+.ArticleList p {
+    margin: 0 auto;
+}
 .ArticleList a:hover {
     color: black;
 }
