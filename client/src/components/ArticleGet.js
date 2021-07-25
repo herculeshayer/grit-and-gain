@@ -65,7 +65,6 @@ const ArticleTitleAuthor = {
 }
 const ArticleInfoStyling = {
     margin: "20px auto 0px auto",
-    
     width: "50%",
     backgroundColor: "white",
     border: "solid black 3px",
@@ -117,7 +116,7 @@ const ArticleGetOne = ({name}) => {
                     <h3>By: {author}</h3>
                     <h6>Upvotes: {upvotes}</h6>
                     <div style={ArticleInfoStyling}>
-                        <p style={{paddingBottom: "50px"}}><h5>Article Information: </h5>{articleInfo}</p>
+                        <p style={{paddingBottom: "40px", paddingTop: "20px"}} id="paragraph-margin"><h5>Article Information: </h5>{articleInfo}</p>
                     </div>
                 </section>
 
