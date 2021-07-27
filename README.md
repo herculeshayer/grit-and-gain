@@ -1,5 +1,7 @@
 # Workout Blog
 
+main webaddress : https://gritandgain.xyz/
+alternate web address : https://main.d3tkshjglpqi9g.amplifyapp.com/
 
 A CRUD workout blog created using 
 MongoDB as the Database
