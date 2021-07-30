@@ -1,9 +1,8 @@
 # Workout Blog
 
 main webaddress : https://gritandgain.netlify.app/
-alternate web address : 
 
-https://main.d3tkshjglpqi9g.amplifyapp.com/
+alternate web address : https://main.d3tkshjglpqi9g.amplifyapp.com/
 
 A CRUD workout blog created using 
 MongoDB as the Database
