@@ -1,4 +1,4 @@
-# Workout Blog 
+# Workout Blog 😄 🏋️
 
 main webaddress : https://gritandgain.netlify.app/
 
@@ -15,12 +15,19 @@ The application is hosted on AWS Amplify using CI/CD workflows
 
 
 #### Installation
-`git clone https://github.com/herculeshayer/grit-and-gain.git`
-cd into client and
-`npm install`
-`npm run start`
-cd into server and
-`npm install`
-`npm run start`
-navigate to localhost:3000 and localhost:8000
+1. `git clone https://github.com/herculeshayer/grit-and-gain.git`
+
+2. cd into client and
+
+  a. `npm install`
+
+  b. `npm run start`
+
+3. cd into server and
+
+  a. `npm install`
+
+  b. `npm run start`
+
+4. navigate to localhost:3000 and localhost:8000
 
