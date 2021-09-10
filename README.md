@@ -12,6 +12,7 @@ NodeJS as the Backend
 The application is hosted on AWS Amplify using CI/CD workflows
 
 **Users can create articles, edit them, and delete them.**
+![grit-and-gain-articles](https://user-images.githubusercontent.com/64183136/132798347-6f008270-ce5d-415d-9b64-a2e19a54abc2.jpg)
 
 
 #### Installation
